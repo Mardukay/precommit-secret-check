@@ -54,9 +54,14 @@ repos:
     hooks:
       - id: gitleaks
 EOF
+#Оновлюємо .gitignore
+echo ".pre-commit*" | cat >> .gitignore
+echo "pre-commit*" | cat >> .gitignore
 #Запуск pre-commit
 python3 pre-commit-3.6.0.pyz
 #Оновлення pre-commit
 python3 pre-commit-3.6.0.pyz autoupdate
 #Встановлення pre-commit
-python3 pre-commit-3.6.0.pyz install 
+python3 pre-commit-3.6.0.pyz install
+#Видалення zip архіву
+rm -rf pre-commit-3.6.0.*
