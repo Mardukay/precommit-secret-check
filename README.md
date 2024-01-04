@@ -1,5 +1,8 @@
 # precommit-secret-check
-Встановлення
+## Встановлення:
+
 В рут директориї репозиторію виконати:
+
 curl https://raw.githubusercontent.com/Mardukay/precommit-secret-check/main/precommit-check.sh | sh
+
 Після цього перед коммітами gitleaks буде перевіряти файли на наявність сікретів 
